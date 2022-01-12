@@ -4,11 +4,11 @@ using System.Diagnostics;
 
 namespace SecondHandBooks.Controllers
 {
-    public class HomeController : Controller
+    public class BookController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly ILogger<BookController> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
+        public BookController(ILogger<BookController> logger)
         {
             _logger = logger;
         }
@@ -19,6 +19,11 @@ namespace SecondHandBooks.Controllers
         }
 
         public IActionResult Privacy()
+        {
+            return View();
+        }
+
+        public IActionResult Details()
         {
             return View();
         }
